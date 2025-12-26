@@ -1,0 +1,9 @@
+# {{ description }}
+
+# List available commands
+default:
+    @just --list
+{% for cmd_name, cmd_exec in just_commands.items() %}
+{{ cmd_name }}:
+    {{ cmd_exec }}
+{% endfor %}
